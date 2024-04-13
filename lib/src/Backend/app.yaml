@@ -1,0 +1,14 @@
+runtime: custom
+env : flex
+
+
+manual_scaling:
+  instances: 1
+
+handlers:
+  - url: /.*
+    script: auto
+
+network:
+  session_affinity: true
+  forwarded_ports: ["3000"]
